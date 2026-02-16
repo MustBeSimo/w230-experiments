@@ -1,0 +1,9 @@
+{
+  "name": "CineFlow",
+  "description": "A professional AI film studio tool for producing consistent keyframes and cinematic transitions. Features multi-model selection (Gemini 3 Pro, 2.5 Flash) and high-fidelity video synthesis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
