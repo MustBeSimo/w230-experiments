@@ -146,7 +146,7 @@ export const ProjectConcept: React.FC<ProjectConceptProps> = ({
             onClick={handlers.onMagicDraft}
             disabled={isDrafting || isFullProduction || !masterConcept}
             className="px-8 py-6 rounded-[2rem] font-bold text-lg bg-white border border-beige-300 text-beige-900 hover:text-terracotta transition-all shadow-sm"
-            title="Generate scene descriptions only without rendering images or videos"
+            title="Enhance your scene descriptions with AI"
           >
             {isDrafting ? <i className="fa-solid fa-spinner animate-spin"></i> : <i className="fa-solid fa-wand-magic-sparkles"></i>}
           </button>
