@@ -50,53 +50,57 @@ export const Header: React.FC<HeaderProps> = ({
         {hasVeoAccess && (
           <div className="flex items-center gap-4">
             {productionStatus && (
-                <div className="flex items-center gap-3 px-4 py-2 bg-terracotta/5 rounded-full border border-terracotta/20 animate-pulse">
-                    <i className="fa-solid fa-clapperboard text-terracotta text-xs"></i>
-                    <span className="text-[10px] font-black uppercase text-terracotta tracking-widest">{productionStatus}</span>
-                </div>
+              <div className="flex items-center gap-3 px-4 py-2 bg-terracotta/5 rounded-full border border-terracotta/20 animate-pulse">
+                <i className="fa-solid fa-clapperboard text-terracotta text-xs"></i>
+                <span className="text-[10px] font-black uppercase text-terracotta tracking-widest">{productionStatus}</span>
+              </div>
             )}
 
             <div className="hidden md:flex items-center gap-2 mr-4 bg-beige-200 p-1.5 rounded-lg border border-beige-300">
-              <button 
-                  onClick={() => onAspectRatioChange('16:9')}
-                  className={`px-4 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${plan.aspectRatio === '16:9' ? 'bg-white shadow-sm text-terracotta' : 'text-beige-900/60 hover:text-terracotta'}`}
+              <button
+                onClick={() => onAspectRatioChange('16:9')}
+                className={`px-4 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${plan.aspectRatio === '16:9' ? 'bg-white shadow-sm text-terracotta' : 'text-beige-900/60 hover:text-terracotta'}`}
+                title="Switch to landscape (16:9) aspect ratio"
               >16:9</button>
-              <button 
-                  onClick={() => onAspectRatioChange('9:16')}
-                  className={`px-4 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${plan.aspectRatio === '9:16' ? 'bg-white shadow-sm text-terracotta' : 'text-beige-900/60 hover:text-terracotta'}`}
+              <button
+                onClick={() => onAspectRatioChange('9:16')}
+                className={`px-4 py-1.5 rounded text-[10px] font-bold uppercase transition-all ${plan.aspectRatio === '9:16' ? 'bg-white shadow-sm text-terracotta' : 'text-beige-900/60 hover:text-terracotta'}`}
+                title="Switch to portrait (9:16) aspect ratio"
               >9:16</button>
             </div>
 
-            <Button 
-                onClick={onFullProduction} 
-                variant="terracotta" 
-                disabled={isProcessing}
-                className="rounded-full px-8 shadow-xl shadow-terracotta/20 group relative overflow-hidden"
+            <Button
+              onClick={onFullProduction}
+              variant="terracotta"
+              disabled={isProcessing}
+              className="rounded-full px-8 shadow-xl shadow-terracotta/20 group relative overflow-hidden"
+              title="Generate all scenes, images, and videos in one automated production"
             >
               {isProcessing ? <i className="fa-solid fa-spinner animate-spin"></i> : <><i className="fa-solid fa-bolt"></i> One-Click Master Cut</>}
             </Button>
 
             {selectedTransitionIndices.size >= 2 && (
-              <Button 
-                onClick={onStitchSelected} 
-                variant="secondary" 
+              <Button
+                onClick={onStitchSelected}
+                variant="secondary"
                 disabled={isProcessing}
                 className="rounded-full px-6 bg-white"
+                title="Combine selected video clips into a single continuous video"
               >
                 {isProcessing ? <i className="fa-solid fa-spinner animate-spin"></i> : <><i className="fa-solid fa-file-video"></i> Stitch ({selectedTransitionIndices.size})</>}
               </Button>
             )}
 
             {transitions.some(t => t.status === 'completed') && (
-                <Button onClick={onPlaySequence} variant="secondary" className="rounded-full px-6 bg-white">
-                    <i className="fa-solid fa-play"></i> Preview
-                </Button>
+              <Button onClick={onPlaySequence} variant="secondary" className="rounded-full px-6 bg-white" title="Preview all completed video clips in sequence">
+                <i className="fa-solid fa-play"></i> Preview
+              </Button>
             )}
           </div>
         )}
 
         {!hasVeoAccess && (
-          <Button onClick={onUnlock} className="rounded-full text-xs font-bold px-8">Unlock Studio</Button>
+          <Button onClick={onUnlock} className="rounded-full text-xs font-bold px-8" title="Enter your API key to unlock video generation features">Unlock Studio</Button>
         )}
       </div>
     </nav>
