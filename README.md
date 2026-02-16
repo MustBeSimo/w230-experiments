@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# W230 Experiments - CineFlow Prototype
 
-# Run and deploy your CineFlow app 
+> [!WARNING]
+> **EXPERIMENTAL / PROPRIETARY**
+> This repository contains experimental prototypes and core IP for the W230 project.
+> **DO NOT COMMIT SECRETS** (API Keys, Credentials, etc.) to this repository.
 
-This contains everything you need to run your app locally.
+## Overview
 
+A cinematic video generation prototype leveraging Gemini 1.5/2.0 Flash and Fal.ai (Veo/Imagen).
 
+## Quickstart
 
-## Run Locally
+### Prerequisites
 
-**Prerequisites:**  Node.js
+- Node.js (v18+)
+- `npm` or `yarn`
 
+### Installation
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/MustBeSimo/w230-experiments.git
+    cd w230-experiments
+    ```
+
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Configure Environment:
+    - Copy `.env.example` to `.env.local`:
+      ```bash
+      cp .env.example .env.local
+      ```
+    - Open `.env.local` and add your API keys:
+      ```bash
+      GEMINI_API_KEY=your_gemini_key_here
+      FAL_API_KEY=your_fal_key_here
+      ```
+
+4.  Run the Development Server:
+    ```bash
+    npm run dev
+    ```
+
+## Security
+
+- **Secrets**: Never commit `.env` files. The `.gitignore` is configured to exclude them.
+- **Auditing**: Periodically scan your git history for accidental leaks.
+
+## License
+
+All Rights Reserved. W230 Internal/Private Use Only.
