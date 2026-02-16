@@ -1,27 +1,11 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# Global Ignores
 node_modules
 dist
-dist-ssr
-*.local
+.DS_Store
+.idea
+.vscode
+
+# Secrets (Strict)
 .env
 .env.*
 !.env.example
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?

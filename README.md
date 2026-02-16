@@ -1,54 +1,21 @@
-# W230 Experiments - CineFlow Prototype
+# W230 Experiments Lab
 
-> [!WARNING]
-> **EXPERIMENTAL / PROPRIETARY**
-> This repository contains experimental prototypes and core IP for the W230 project.
-> **DO NOT COMMIT SECRETS** (API Keys, Credentials, etc.) to this repository.
+This repository serves as a public R&D surface for W230, containing multiple independent experimental prototypes.
 
-## Overview
+> [!NOTE]
+> **EXPERIMENTAL STATUS**
+> Projects in this repository are **low-fidelity prototypes** and **proofs of concept**.
+> They are not production-ready and may change rapidly.
 
-A cinematic video generation prototype leveraging Gemini 1.5/2.0 Flash and Fal.ai (Veo/Imagen).
+## Structure
 
-## Quickstart
+Each folder represents an isolated experiment with its own scope and stack.
 
-### Prerequisites
+- **[cineflow](./cineflow)**: Cinematic AI video generation pipeline.
 
-- Node.js (v18+)
-- `npm` or `yarn`
+## Usage
 
-### Installation
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/MustBeSimo/w230-experiments.git
-    cd w230-experiments
-    ```
-
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-
-3.  Configure Environment:
-    - Copy `.env.example` to `.env.local`:
-      ```bash
-      cp .env.example .env.local
-      ```
-    - Open `.env.local` and add your API keys:
-      ```bash
-      GEMINI_API_KEY=your_gemini_key_here
-      FAL_API_KEY=your_fal_key_here
-      ```
-
-4.  Run the Development Server:
-    ```bash
-    npm run dev
-    ```
-
-## Security
-
-- **Secrets**: Never commit `.env` files. The `.gitignore` is configured to exclude them.
-- **Auditing**: Periodically scan your git history for accidental leaks.
+Navigate to any experiment folder and follow its specific `README.md` for instructions.
 
 ## License
 

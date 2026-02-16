@@ -24,12 +24,13 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
+      working-directory: ./cineflow
       run: npm ci
       
     - name: Build
+      working-directory: ./cineflow
       run: npm run build --if-present
       env:
-        # Provide dummy keys for build process if needed, 
-        # normally build shouldn't require runtime keys but some frameworks might check existence.
+        # Provide dummy keys for build process if needed
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'build_dummy_key' }}
         FAL_API_KEY: ${{ secrets.FAL_API_KEY || 'build_dummy_key' }}
