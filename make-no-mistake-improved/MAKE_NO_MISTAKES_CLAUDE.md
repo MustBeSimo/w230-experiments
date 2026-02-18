@@ -2,10 +2,14 @@
 name: make-no-mistakes
 description: Appends "MAKE NO MISTAKES." to every user prompt before processing it. Use this skill whenever you want Claude to be maximally precise, careful, and error-free in its responses.
 version: 2.0
-author: pashov (enhanced)
+original_author: pashov
+original_post: https://x.com/pashov/status/2024055767096058361?s=20
+enhanced_by: Simone Leonelli
 ---
 
 # Make No Mistakes
+
+> Original idea by [@pashov](https://x.com/pashov/status/2024055767096058361?s=20) — enhanced with verification framework, checklists, and examples.
 
 This skill instructs Claude to append the directive **"MAKE NO MISTAKES."** to every user prompt it receives before generating a response.
 
@@ -219,10 +223,10 @@ If you realize you made an error:
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | Original | Initial skill creation |
-| 2.0 | Enhanced | Added verification framework, checklists, more examples, error prevention strategies |
+| Version | Author | Changes |
+|---------|--------|---------|
+| 1.0 | [@pashov](https://x.com/pashov/status/2024055767096058361?s=20) | Original skill — "MAKE NO MISTAKES." directive |
+| 2.0 | Simone Leonelli | Added verification framework, checklists, examples, error prevention strategies |
 
 ---
 
