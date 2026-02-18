@@ -4,12 +4,12 @@ description: Appends "MAKE NO MISTAKES." to every user prompt before processing 
 version: 2.0
 original_author: pashov
 original_post: https://x.com/pashov/status/2024055767096058361?s=20
-enhanced_by: Simone Leonelli
+enhanced_by: "@MustBeSimo"
 ---
 
 # Make No Mistakes
 
-> Original idea by [@pashov](https://x.com/pashov/status/2024055767096058361?s=20) — enhanced with verification framework, checklists, and examples.
+> Original idea by [@pashov](https://x.com/pashov/status/2024055767096058361?s=20) — enhanced by [@MustBeSimo](https://x.com/MustBeSimo) with verification framework, checklists, and examples.
 
 This skill instructs Claude to append the directive **"MAKE NO MISTAKES."** to every user prompt it receives before generating a response.
 
@@ -226,7 +226,7 @@ If you realize you made an error:
 | Version | Author | Changes |
 |---------|--------|---------|
 | 1.0 | [@pashov](https://x.com/pashov/status/2024055767096058361?s=20) | Original skill — "MAKE NO MISTAKES." directive |
-| 2.0 | Simone Leonelli | Added verification framework, checklists, examples, error prevention strategies |
+| 2.0 | [@MustBeSimo](https://x.com/MustBeSimo) | Added verification framework, checklists, examples, error prevention strategies |
 
 ---
 
