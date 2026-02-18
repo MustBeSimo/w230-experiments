@@ -12,6 +12,7 @@ This repository serves as a public R&D surface for W230, containing multiple ind
 Each folder represents an isolated experiment with its own scope and stack.
 
 - **[cineflow](./cineflow)**: Cinematic AI video generation pipeline.
+- **[make-no-mistake-improved](./make-no-mistake-improved)**: Enhanced Claude skill for maximum precision — appends "MAKE NO MISTAKES." to every prompt with a full verification framework.
 
 ## Usage
 
